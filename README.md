@@ -28,6 +28,5 @@ In your Sass:
 For optimal results and minimal filesize, run your SVGs through [SVGO](https://github.com/svg/svgo) first.
 
 ## TODO:
-* tests
 * always run through svgo?
 * string replacement
