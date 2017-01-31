@@ -4,6 +4,9 @@
   "description": "",
   "author": "Franz Heidl",
   "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
   "license": "MIT",
   "dependencies": {
     "escape-html": "^1.0.3",
