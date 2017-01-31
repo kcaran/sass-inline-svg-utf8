@@ -3,23 +3,12 @@ var path = require('path');
 var sass = require('node-sass');
 var inlineSVG = require('../');
 
-
 var render = function(file, done) {
   return sass.render({
     functions: inlineSVG(),
     file: __dirname + '/scss/' + file
   }, done);
 }
-
-
-// render('inline-svg.scss', function(error, result) {
-//   if (error) {
-//     console.error(error);
-//   } else {
-//     console.log(result.css.toString());
-//   }
-// });
-
 
 var equalsFile = function(file, done) {
   render(file, function(error, result) {
@@ -33,14 +22,36 @@ var equalsFile = function(file, done) {
   });
 }
 
-var files = fs.readdirSync(path.join(__dirname, 'scss'));
+var throwsAnError = function(file, done) {
+  expect(render(file, function(error, result) {
+    done();
+  })).toThrow()
+}
 
 describe('inline-svg', function() {
-  files.forEach(function(file) {
-    test(file, function(done) {
-      equalsFile(file, done);
-    })
+  var file = 'inline-svg.scss';
+  test(file, function(done) {
+    equalsFile(file, done);
   })
 });
 
+describe('throws an error when trying to inline an empty file', function() {
+  var file = 'empty.scss';
+  test(file, function(done) {
+    throwsAnError(file, done);
+  })
+});
 
+describe('throws an error when trying to inline a non-existing file', function() {
+  var file = 'non-existent.scss';
+  test(file, function(done) {
+    throwsAnError(file, done);
+  })
+})
+
+describe('throws an error when trying to inline a non-SVG file', function() {
+  var file = 'non-svg.scss';
+  test(file, function(done) {
+    throwsAnError(file, done);
+  })
+})
