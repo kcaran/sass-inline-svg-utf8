@@ -10,7 +10,7 @@ var inlineImage = function(filepath, replace, done) {
   if (mimeType !== 'image/svg+xml') {
     throw new Error('File ' + filepath + ' is not of type image/svg+xml.');
   } else {
-    var data = fs.readFileSync(filepath); /* TODO error handling of fs.readFileSync? */
+    var data = fs.readFileSync(filepath);
     if (!data || !data.length) {
       throw new Error('File ' + filepath + ' is empty or cannot be read')
     }
