@@ -1,7 +1,7 @@
 {
   "name": "sass-inline-svg-utf8",
   "version": "1.0.2",
-  "description": "",
+  "description": "Inline SVGs in your CSS as html-encoded UTF-8, string replacement included.",
   "author": "Franz Heidl",
   "main": "index.js",
   "scripts": {
