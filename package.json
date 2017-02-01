@@ -11,7 +11,8 @@
   "dependencies": {
     "escape-html": "^1.0.3",
     "mime": "^1.3.4",
-    "node-sass": "^4.4.0"
+    "node-sass": "^4.4.0",
+    "replaceall": "^0.1.6"
   },
   "devDependencies": {
     "jest": "^18.1.0"

@@ -35,6 +35,13 @@ describe('inline-svg', function() {
   })
 });
 
+describe('replaces a string', function() {
+  var file = 'replace.scss';
+  test(file, function(done) {
+    equalsFile(file, done);
+  })
+});
+
 describe('throws an error when trying to inline an empty file', function() {
   var file = 'empty.scss';
   test(file, function(done) {
