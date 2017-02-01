@@ -60,6 +60,3 @@ So to create three instances of the same SVG source file in your CSS:
     .black-arrow {
       background-image: inline-svg('./images/arrow.svg', { fillcolor: 'black'});
     }
-
-## TODO:
-* implement string replacement
