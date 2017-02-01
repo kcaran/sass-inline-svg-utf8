@@ -1,19 +1,19 @@
 #sass-inline-svg
 
-Inline SVGs in your CSS using Html-encoding. 
+Inline SVGs in your CSS as html-encoded UTF-8. 
 
 Inlining is good because fewer requests, html-encoded is good for SVG because it is smaller than base64 (by about 30% on average).
 
-String replacement is good because you can use 'variables' in your SVG files and replace them on a per-inlined-instance basis. Use case? You need a white, a black, and a blue arrow icon, and can create them on the fly when inling from a single source file. Good because if the arrow needs to be changed, you only have to change on file, not three.
+String replacement is good because you can use 'variables' in your SVG source files and replace them on a per-inlined-instance basis. Use case? You need a white, a black, and a blue arrow icon, and can create them on the fly when inling from a single source file. Good because if the arrow needs to be changed, you only have to change on file, not three.
 
 ## Install
 
-    npm install --save-dev node-sass-inline-svg
+    npm install --save-dev sass-inline-svg-utf8
 
 ## Usage
 
     var sass = require('node-sass');
-    var sassInlineSVG = require('node-sass-inline-svg')
+    var sassInlineSVG = require('sass-inline-svg-utf8');
     
     sass.render({
       functions: sassInlineSVG(),

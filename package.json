@@ -1,6 +1,6 @@
 {
-  "name": "node-sass-inline-svg",
-  "version": "0.0.1",
+  "name": "sass-inline-svg-utf8",
+  "version": "1.0.0",
   "description": "",
   "author": "Franz Heidl",
   "main": "index.js",
