@@ -44,6 +44,8 @@ In your Sass, you can pass a map of variables to replace as a second parameter:
     .myClass {
       background-image: inline-svg('./images/arrow.svg', { fillcolor: '#000000'});
     }
+    
+This will replace all occurences of `fillcolor` in the SVG file with `#000000` in the inlined SVG.
 
 If you want to use `$`-prepended variable names to match your Sass variables, quote them in the Sass map like `{ '$fillcolor': '#000000' }`. 
 
