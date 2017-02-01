@@ -4,7 +4,7 @@ Inline SVGs in your CSS using Html-encoding.
 
 Inlining is good because fewer requests, html-encoded is good for SVG because it is smaller than base64 (by about 30% on average).
 
-String replacement is good because you can use 'variables' in your SVG files and replace them on a per-inlined-instance basis. Use case? You need a white, a black, and a blue arrow icon, and can create them on the fly when inling from a single source file. Good because if the arrow changes, you only have to change on file, not three.
+String replacement is good because you can use 'variables' in your SVG files and replace them on a per-inlined-instance basis. Use case? You need a white, a black, and a blue arrow icon, and can create them on the fly when inling from a single source file. Good because if the arrow needs to be changed, you only have to change on file, not three.
 
 ## Install
 
@@ -47,7 +47,7 @@ This will result in (not html encoded here for readability):
 
     <path fill="#000000" […] />
     
-So to create three instances of the same SVG source file:
+So to create three instances of the same SVG source file in your CSS:
 
     .red-arrow {
       background-image: inline-svg('./images/arrow.svg', { fillcolor: 'red'});
