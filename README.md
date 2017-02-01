@@ -1,4 +1,4 @@
-#sass-inline-svg
+#sass-inline-svg-utf8
 
 Inline SVGs in your CSS as html-encoded UTF-8. 
 
