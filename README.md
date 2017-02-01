@@ -1,5 +1,7 @@
 #sass-inline-svg-utf8
 
+[![Build Status](https://travis-ci.org/franzheidl/sass-inline-svg-utf8.svg?branch=master)](https://travis-ci.org/franzheidl/sass-inline-svg-utf8) [![npmjs](https://badge.fury.io/js/sass-inline-svg-utf8.svg)](https://www.npmjs.com/package/sass-inline-svg-utf8)
+
 Inline SVGs in your CSS as html-encoded UTF-8. 
 
 Inlining is good because fewer requests, html-encoded is good for SVG because it is smaller than base64 (by about 30% on average).
