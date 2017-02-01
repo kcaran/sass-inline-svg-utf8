@@ -14,7 +14,7 @@ String replacement is good because you can use 'variables' in your SVG source fi
 
     var sass = require('node-sass');
     var sassInlineSVG = require('sass-inline-svg-utf8');
-    
+
     sass.render({
       functions: sassInlineSVG(),
       file: file,
@@ -22,41 +22,43 @@ String replacement is good because you can use 'variables' in your SVG source fi
     }, function(error, result) {
         /* Your code here */
     });
-    
+
 In your Sass:
 
     .myClass {
       background-image: inline-svg('./images/logo.svg');
     }
-    
+
 For optimal results and minimal filesize, run your SVGs through [SVGO](https://github.com/svg/svgo) first (Actually, I'm on the fence whether to include SVGO optimization by default when inlining, but I’m not sure because of various settings/complexity). If you have a strong opinion on that, let’s dicuss [here](TODO: link to issue)
 
 ## Advanced Usage w/ String replacement
 
-SVG:
+In your SVG source, you can use variable strings to replace when inlining:
 
     <path fill="fillcolor" […] />
-    
-In your Sass:
+
+In your Sass, you can pass a map of variables to replace as a second parameter:
 
     .myClass {
       background-image: inline-svg('./images/arrow.svg', { fillcolor: '#000000'});
     }
-      
+
+If you want to use `$`-prepended variable names to match your Sass variables, quote them in the Sass map like `{ '$fillcolor': '#000000' }`. 
+
 This will result in (not html encoded here for readability):
 
     <path fill="#000000" […] />
-    
-So to create three instances of the same SVG source file in your CSS:
+
+So to create three instances of the same SVG source with different fill colors in your CSS:
 
     .red-arrow {
       background-image: inline-svg('./images/arrow.svg', { fillcolor: 'red'});
     }
-    
+
     .blue-arrow {
       background-image: inline-svg('./images/arrow.svg', { fillcolor: 'blue'});
     }
-    
+
     .black-arrow {
       background-image: inline-svg('./images/arrow.svg', { fillcolor: 'black'});
     }
