@@ -31,7 +31,7 @@ In your Sass:
       background-image: inline-svg('./images/logo.svg');
     }
 
-For optimal results and minimal filesize, run your SVGs through [SVGO](https://github.com/svg/svgo) first (Actually, I'm on the fence whether to include SVGO optimization by default when inlining, but I’m not sure because of various settings/complexity). If you have a strong opinion on that, let’s dicuss [here](https://github.com/franzheidl/sass-inline-svg-utf8/issues/1)
+For optimal results and minimal filesize, run your SVGs through [SVGO](https://github.com/svg/svgo) first (Actually, I'm on the fence whether to include SVGO optimization by default when inlining, but I’m not sure because of various settings/complexity). If you have a strong opinion on that, let’s dicuss [here](https://github.com/franzheidl/sass-inline-svg-utf8/issues/1).
 
 ## Advanced Usage w/ String replacement
 
