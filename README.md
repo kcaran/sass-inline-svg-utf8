@@ -66,4 +66,18 @@ So to create three instances of the same SVG source with different fill colors i
     .black-arrow {
       background-image: inline-svg( './images/arrow.svg', ( fillcolor: 'black'));
     }
+
+**Important:**To use non-named colors like hex, rgba etc., these need to be passed as a quoted string (this is down to the current behavior of node-sass/libsass):
+
+    .white-arrow {
+      background-image: inline-svg( './images/arrow.svg', ( fillcolor: '#fff'));
+    }
+    
+Whn using variables that may contain colors, these need to be evaluated to be on the safe side:
+
+    .custom-arrow {
+      background-image: inline-svg( './images/arrow.svg', ( fillcolor: #{$custom-color}));
+    }
+    
+I have opened [this issue](https://github.com/sass/node-sass/issues/1907) with node-sass to make the quoting/evaluating unnecessary (fingers crossed…)
   
