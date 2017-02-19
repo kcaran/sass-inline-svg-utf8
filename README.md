@@ -67,7 +67,9 @@ So to create three instances of the same SVG source with different fill colors i
       background-image: inline-svg( './images/arrow.svg', ( fillcolor: 'black'));
     }
 
-**Important:**To use non-named colors like hex, rgba etc., these need to be passed as a quoted string (this is down to the current behavior of node-sass/libsass):
+### Using colors
+
+To use non-named colors like hex, rgba etc., these need to be passed as a quoted string (this is down to the current behavior of node-sass/libsass):
 
     .white-arrow {
       background-image: inline-svg( './images/arrow.svg', ( fillcolor: '#fff'));
