@@ -56,13 +56,14 @@ This will result in (not html encoded here for readability):
 So to create three instances of the same SVG source with different fill colors in your CSS:
 
     .red-arrow {
-      background-image: inline-svg('./images/arrow.svg', { fillcolor: 'red'});
+      background-image: inline-svg( './images/arrow.svg', ( fillcolor: 'red'));
     }
 
     .blue-arrow {
-      background-image: inline-svg('./images/arrow.svg', { fillcolor: 'blue'});
+      background-image: inline-svg( './images/arrow.svg', ( fillcolor: 'blue'));
     }
 
     .black-arrow {
-      background-image: inline-svg('./images/arrow.svg', { fillcolor: 'black'});
+      background-image: inline-svg( './images/arrow.svg', ( fillcolor: 'black'));
     }
+  
