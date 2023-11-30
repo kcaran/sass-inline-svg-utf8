@@ -16,9 +16,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "escape-html": "*",
+    "escape-html": "^1.0",
     "mime": "^3.0",
-    "node-sass": "*",
+    "node-sass": "^9.0",
     "replaceall": "*"
   },
   "devDependencies": {
